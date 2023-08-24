@@ -20,17 +20,11 @@ namespace WaterWarming_HurricaneSeason
             {
                 if ((segment.Item as YearlyTemperatureAnomaly).Temperature > 0)
                 {
-
-                    // green 47, 247, 2
-                    // dark green - 44, 219, 4
-                    // blue 82, 233, 250
-                    return new SolidColorBrush(Color.FromRgb(44, 219, 4));
+                    return new SolidColorBrush(Color.FromRgb(252, 47, 28));
                 }
                 else
                 {
-                    //Dark pink- 2, 218, 247
-                    //230, 7, 159
-                    return new SolidColorBrush(Color.FromRgb(230, 7, 159));
+                    return new SolidColorBrush(Color.FromRgb(16, 167, 227));
                 }
 
             }
@@ -54,16 +48,11 @@ namespace WaterWarming_HurricaneSeason
             {
                 if ((segment.Item as YearlyTemperatureAnomaly).Temperature > 0)
                 {
-                    // green 47, 247, 2
-                    //dark green
-                    // blue 82, 233, 250
-                    return new SolidColorBrush(Color.FromRgb(44, 219, 4));
+                    return new SolidColorBrush(Color.FromRgb(252, 47, 20));
                 }
                 else
                 {
-                    //Dark pink- 2, 218, 247
-                    //230, 7, 159
-                    return new SolidColorBrush(Color.FromRgb(242, 61, 184));
+                    return new SolidColorBrush(Color.FromRgb(16, 167, 227));
                 }
 
             }
