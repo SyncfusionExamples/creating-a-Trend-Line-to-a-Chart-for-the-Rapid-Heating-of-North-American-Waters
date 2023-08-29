@@ -24,14 +24,5 @@ namespace WaterWarming_HurricaneSeason
         {
             InitializeComponent();
         }
-
-      
-
-      
-
-        private void NumericalAxis_LabelCreated_1(object sender, Syncfusion.UI.Xaml.Charts.LabelCreatedEventArgs e)
-        {
-
-        }
     }
 }
