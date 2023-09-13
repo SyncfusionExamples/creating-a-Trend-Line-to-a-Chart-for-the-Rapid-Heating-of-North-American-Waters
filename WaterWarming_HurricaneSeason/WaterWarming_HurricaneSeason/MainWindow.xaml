@@ -53,10 +53,10 @@
                         </Path>
                     </StackPanel>
                     <StackPanel Margin="5,0,0,0" HorizontalAlignment="Left"  Orientation="Vertical" Grid.Column="1" >
-                        <TextBlock  Text="Creating a Trend Line to a Chart for the Rapid Heating of " 
+                        <TextBlock  Text="Creating a Trend Line to a Chart for the Rapid " 
                        HorizontalAlignment="Left" TextWrapping="Wrap"
                        FontSize="35" FontWeight="SemiBold" Foreground="Black"/>
-                        <TextBlock Text="North American Waters during Hurricane Season" 
+                        <TextBlock Text="Heating of North American Oceans" 
                        HorizontalAlignment="Left" FontWeight="SemiBold"
                        FontSize="35" Foreground="Black"/>
                        
@@ -119,7 +119,7 @@
                                     ItemsSource="{Binding CollectionOfTemperature}" >
                     <chart:ColumnSeries.Trendlines>
                         <chart:Trendline Stroke="Black" StrokeThickness="2"
-                                         Foreground="Black" Type="Linear"/>
+                                         Foreground="Black" />
                     </chart:ColumnSeries.Trendlines>
                 </chart:ColumnSeries>
             </chart:SfChart.Series>
