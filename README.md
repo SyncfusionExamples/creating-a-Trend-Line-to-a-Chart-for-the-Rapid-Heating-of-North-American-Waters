@@ -1,5 +1,5 @@
 # creating-a-Trend-Line-to-a-Chart-for-the-Rapid-Heating-of-North-American-Oceans
-This sample demonstrates how to create a Trend Line to a Chart for the Rapid Heating of North American Oceans.
+This sample demonstrates how to create a Trend Line to Chart the Rapid Heating of North American Oceans.
 
 ## TrendLine
 
@@ -14,4 +14,4 @@ We can customize the column appearance using [CustomTemplate](https://help.syncf
 
 
 
-<img width="916" alt="TrendLineChart" src="https://github.com/SyncfusionExamples/creating-a-Trend-Line-to-a-Chart-for-the-Rapid-Heating-of-North-American-Waters/assets/105482474/8100f2bc-c3a5-4c11-8a23-2371e8b2cbf3">
+<img width="934" alt="TrendLineOutput" src="https://github.com/SyncfusionExamples/creating-a-Trend-Line-to-a-Chart-for-the-Rapid-Heating-of-North-American-Waters/assets/105482474/7b4e4cbb-26c8-4c9d-9a3a-fd583e522d48">

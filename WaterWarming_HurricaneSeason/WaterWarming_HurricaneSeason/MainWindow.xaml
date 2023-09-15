@@ -53,7 +53,7 @@
                         </Path>
                     </StackPanel>
                     <StackPanel Margin="5,0,0,0" HorizontalAlignment="Left"  Orientation="Vertical" Grid.Column="1" >
-                        <TextBlock  Text="Creating a Trend Line to a Chart for the Rapid " 
+                        <TextBlock  Text="Creating a Trend Line to Chart the Rapid " 
                        HorizontalAlignment="Left" TextWrapping="Wrap"
                        FontSize="35" FontWeight="SemiBold" Foreground="Black"/>
                         <TextBlock Text="Heating of North American Oceans" 
@@ -81,9 +81,9 @@
                                 </Path.Data>
                             </Path>
                         </Canvas>
-                        <TextBlock Text="1880-2022 Trend" TextAlignment="Left" Margin="0,0,-100,0" Width="500" 
+                        <TextBlock Text="1880-2022 trend" TextAlignment="Left" Margin="0,0,-100,0" Width="500" 
                                    VerticalAlignment="Bottom" FontSize="20" Foreground="Gray"/>
-                        <TextBlock Text="Ocean temperature anomalies"   TextAlignment="Left" Width="500" 
+                        <TextBlock Text="ocean temperature anomalies"   TextAlignment="Left" Width="500" 
                                    VerticalAlignment="Bottom" FontSize="20" Foreground="Gray"/>
                     </StackPanel>
                 </Grid>
