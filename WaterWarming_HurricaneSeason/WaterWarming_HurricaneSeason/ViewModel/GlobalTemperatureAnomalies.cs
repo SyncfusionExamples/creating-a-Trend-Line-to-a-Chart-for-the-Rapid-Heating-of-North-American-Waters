@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
@@ -15,7 +16,7 @@ namespace WaterWarming_HurricaneSeason
     {
         private ObservableCollection<YearlyTemperatureAnomaly> collection;
         public ObservableCollection<YearlyTemperatureAnomaly> CollectionOfTemperature
-        { 
+        {
             set { collection = value; }
             get { return collection; }
         }
@@ -31,20 +32,38 @@ namespace WaterWarming_HurricaneSeason
 
         public GlobalTemperatureAnomalies()
         {
-            CollectionOfTemperature = new ObservableCollection<YearlyTemperatureAnomaly>(ReadCSV("F:\\WPF\\Blog\\WaterWarming_HurricaneSeason\\WaterWarming_HurricaneSeason\\TemperatureAnomalies"));
+            CollectionOfTemperature = new ObservableCollection<YearlyTemperatureAnomaly>(ReadCSV("WaterWarming_HurricaneSeason.TemperatureAnomalies.csv"));
         }
 
         public IEnumerable<YearlyTemperatureAnomaly> ReadCSV(string fileName)
         {
-            List<string> lines = File.ReadAllLines(System.IO.Path.ChangeExtension(fileName, ".csv")).ToList();
+            Assembly executingAssembly = typeof(App).GetTypeInfo().Assembly;
+            Stream inputStream = executingAssembly.GetManifestResourceStream(fileName);
+            List<string> lines = new List<string>();
+            List<YearlyTemperatureAnomaly> collection = new List<YearlyTemperatureAnomaly>();
 
-            return lines.Select(line =>
+            if (inputStream != null)
             {
-                string[] data = line.Split(',');
-               
-                DateTime date = DateTime.ParseExact(data[0], "yyyy", CultureInfo.InvariantCulture);
-                return new YearlyTemperatureAnomaly(date, Convert.ToDouble(data[1]));
-            });
+                string line;
+                StreamReader reader = new StreamReader(inputStream);
+                while ((line = reader.ReadLine()) != null)
+                {
+                    lines.Add(line);
+                }
+                lines.RemoveAt(0);
+
+                foreach (var dataPoint in lines)
+                {
+                    string[] data = dataPoint.Split(',');
+                    DateTime date = DateTime.ParseExact(data[0], "yyyy", CultureInfo.InvariantCulture);
+                    collection.Add(new YearlyTemperatureAnomaly(date, Convert.ToDouble(data[1])));
+                }
+
+                return collection;
+            }
+
+            return collection;
+
         }
     }
 }
